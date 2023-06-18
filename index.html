@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Reservation System</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <img src="bus3_image.jpg" alt="Bus Image" class="bus-image">
+    <div class="content">
+      <h1>Bus Reservation System</h1>
+      
+      <form id="booking-form">
+        <label for="from">From:</label>
+        <input type="text" id="from" list="from-places" required>
+        <datalist id="from-places">
+          <option value="Peoria">
+          <option value="Chicago">
+          <option value="Bloomington">
+          <!-- Add more options as needed -->
+        </datalist>
+        
+        <label for="to">To:</label>
+        <input type="text" id="to" list="to-places" required>
+        <datalist id="to-places">
+          <option value="New York">
+          <option value="Buffalo">
+          <option value="Chicago">
+          <!-- Add more options as needed -->
+        </datalist>
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        
+        <label for="passengers">Adult Passengers:</label>
+        <input type="number" id="passengers" min="1" required>
+        
+        <label for="child-passengers">Child Passengers:</label>
+        <input type="number" id="child-passengers" min="0">
+        
+        <div class="submit-container">
+          <input type="submit" value="Search Buses">
+        </div>
+      </form>
+      
+      <div id="results"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
